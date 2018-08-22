@@ -1,0 +1,135 @@
+@media (min-width: 768px) {
+    .container {
+        padding:0px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header_content h1 p {
+        font-size: 28px;
+        color: #fff;
+        padding: 21px 85px 9px 21px;
+    }
+    
+    .section_3_first img, .section_5_img img, .section_1 img {
+        width: 100%;
+    }
+    .f-nav .fixed_button  {
+        display: none !important;
+    }
+    .f-nav {
+        height: 60px;
+    }
+    .navbar-brand>img {
+        width: 60%;
+    }
+    .navbar-default .navbar-toggle {
+        margin-top: 15px;
+    }
+    .navbar-default .navbar-collapse {
+        background: #fff;
+    }
+    .container-fluid>.navbar-collapse {
+        margin-left: -15px;
+        position: relative;
+        top: -6px;
+    }
+    header {
+        background-position-x: 64%;
+    }
+    
+    header h1 p {
+        background-size: 95%;
+        background-position-y: 8px;
+    }
+    .header_content h1 span {
+        font-size: 26px;
+        padding-bottom: 20px;
+        padding-top:5px;
+    }
+    .header_content_text {
+        background: rgba(255,255,255,0.6);
+        padding-bottom: 24px;
+    }
+    .header_content {
+        padding-top: 20px;
+    }
+    header {
+        padding-bottom: 100px;
+    }
+    .question_header {
+        display: none;
+    }
+    .mobile_header img {
+        margin-left: 20px;
+    }
+    .mobile_header {
+        margin-bottom: 8px;
+        display: block;
+    }
+    .mail_header, .mobile_header {
+        font-size: 14px;
+    }
+    .section_1 img, .section_1 {
+        padding-top: 30px;
+    }
+    .h2:after, .h2:before {
+        left:0px;
+        height:2px;
+    }
+    .section_2 .col-md-3 {
+        padding-bottom: 40px;
+    }
+    .section_3_second {
+        padding-top: 40px;
+    }
+    .section_4 table td {
+        vertical-align: middle;
+    }
+    .section_4 table tr td:nth-child(1) {
+        width: 20%;
+        padding-right: 8px;
+    }
+    .section_5 .h2 {
+            font-size: 36px;
+    }
+    .section_5_img {
+        margin-top: 28px;
+        margin-left: 0px;
+    }
+    .section_6 .h2 {
+        font-size: 32px;
+    }
+    .section_6_block {
+        text-align: center;
+    }
+    .section_6 .content-left {
+        float: none;
+        padding-right: 0px;
+    }
+    
+    #review .h2:before, #review .h2:after {
+        content: none;
+    }
+    .review_content {
+        text-align: center;
+    }
+    .review_img {
+        float: none;
+        padding-right: 0px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .section_7 .col-md-6 {
+        padding-bottom: 50px;
+    }
+    .maps_block {
+        position: static;
+    }
+    .section_7 {
+        padding-bottom: 20px;
+    }
+} 

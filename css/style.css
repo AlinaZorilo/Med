@@ -1,0 +1,646 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: "HelveticaNeueCyr-Light";
+    color:#525252;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face { 
+    font-family: "HelveticaNeueCyr-Light";
+    src: url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf) format("truetype"); /* все современные браузеры */
+}
+
+@font-face { 
+    font-family: "HelveticaNeueCyr-Roman";
+    src: url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf) format("truetype"); /* все современные браузеры */
+}
+
+@font-face { 
+    font-family: "HelveticaNeueCyr-Thin";
+    src: url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.ttf) format("truetype"); /* все современные браузеры */
+}
+
+@font-face { 
+    font-family: "HelveticaNeueCyr-Bold";
+    src: url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf) format("truetype"); /* все современные браузеры */
+}
+
+@font-face { 
+    font-family: "HelveticaNeueCyr-Medium";
+    src: url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf) format("truetype"); /* все современные браузеры */
+}
+
+@font-face { 
+    font-family: "Geometria";
+    src: url(../fonts/Geometria/Geometria.eot) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../fonts/Geometria/Geometria.woff) format("woff"), /* все современные браузеры, IE9+ */
+         url(../fonts/Geometria/Geometria.ttf) format("truetype"); /* все современные браузеры */
+}
+
+
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+.f-nav {
+      position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  opacity: 1;
+  background-color: #039be5;
+  transition: all .4s ease;
+    z-index: 999;
+                text-align: left;
+            padding-left: 20px;
+}
+
+.navbar {
+    -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+}
+
+.fixed_button {
+    display: none;
+}
+
+.fixed_button .btn_button {
+    background: #25aae1;
+    padding: 16px;
+    margin-top: 28px;
+    margin-right: 37px;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    padding-left: 25px;
+    padding-right: 23px;
+    cursor: pointer;
+}
+
+.f-nav .fixed_button {
+    display: block;
+}
+
+header {
+    background: url(../img/header_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 196px;
+        background-position-x: 50%;
+}
+
+header h1 p {
+    background: url(../img/h1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding
+}
+
+.h2 {
+    text-align: center;
+    font-family: "Geometria";
+    font-size: 50px;
+    padding-bottom: 22px;
+}
+
+.h2:before {
+    content: "";
+    width: 55px;
+    height: 1px;
+    display: inline-block;
+    background: #25aae1;
+    position: relative;
+    top: -12px;
+    left: -21px;
+}
+
+.h2:after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    display: inline-block;
+    background: #25aae1;
+    position: relative;
+    top: -12px;
+    left: 21px; 
+}
+.color-grey {
+    background:#f0f4f2;
+}
+
+.top_header {
+    padding-top: 20px;
+    font-family: "HelveticaNeueCyr-Light";
+    padding-bottom: 6px;
+}
+
+.question_header {
+    color:#404040;
+    text-decoration: underline; 
+    padding-left: 7px;
+    font-size: 16px;
+}
+
+.mobile_header {
+    font-size: 16px;
+    color:#404040;
+}
+
+.mobile_header img {
+    padding-right: 1px;
+    margin-left: 8px;
+    margin-right: 5px;  
+}
+
+.mail_header {
+    font-size: 16px;
+    color:#404040;
+}
+
+.mail_header img {
+    margin-left: 3px;
+    margin-right: 9px;
+}
+
+.social, .language  {
+    display: inline;
+}
+
+.social {
+    position: relative;
+    top: -7px;
+    padding-right: 12px;
+}
+
+.social a {
+    border: 1px solid #acdaec;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social a img { 
+    position: relative;
+}
+
+.facebook img {
+    top: 7px;
+    left: -9px;
+}
+
+.vk img {
+    top: 6px;
+    left: -6px;
+}
+
+.inst img {
+    top: 7px;
+    left: -8px;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    border-radius: 0px;
+    padding-bottom: 4px;
+}
+ 
+.navbar-brand {
+    height: auto;
+    position: relative;
+    top: 2px;
+    left: 7px;
+}
+
+.navbar-nav {
+    font-size: 16px;
+    float: left;
+    margin: 0;
+    margin-top: 25px;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+    border-right: 1px solid #e8e8e8;
+    padding-right: 5px;
+}
+
+.nav>li:last-child {
+    border:none;
+}
+
+.nav>li>a {
+    color:#323232;
+}
+
+.nav>li>a:hover {
+    color:#25aae1 !important;
+    transition: .2s;
+}
+
+.header_content {
+    padding-top: 102px;
+}
+
+.header_content h1 {
+    
+}
+
+.header_content h1 p {
+    font-family: "HelveticaNeueCyr-Roman";
+    font-size: 66px;
+    color: #fff;
+    padding: 26px 160px 9px 26px;
+}
+
+.header_content h1 span {
+    font-family: "HelveticaNeueCyr-Light";
+    font-size: 41px;
+    padding-top: 24px;
+    display: block;
+}
+
+.header_content_text {
+    padding-top: 27px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.btn_button  {
+    background: #25aae1;
+    padding: 16px;
+    margin-top: 37px;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 34px;
+    padding-right: 29px;
+    cursor: pointer;
+}
+
+.btn_button:hover {
+    color:#fff;
+}
+
+.btn_button  img {
+    padding-left: 19px;
+}
+
+.section_1 {
+    padding-top: 70px;
+    padding-bottom: 66px;
+}
+
+.section_1 h2 {
+    font-family: "Geometria";
+    font-size: 50px;
+    color:#525252;
+}
+
+.section_1 p {
+    font-family: "HelveticaNeueCyr-Thin";
+    padding-top: 14px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.section_1 img {
+    padding-top: 67px;
+    position: relative;
+    left: -14px;
+}
+
+.section_2 {
+    padding-top: 56px;
+    padding-bottom: 100px;
+}
+
+.section_2  .col-md-3 {
+    text-align: center;
+}
+
+.section_2 h3 {
+    font-size: 27px;
+    padding-top: 12px;
+}
+
+.section_2 p {
+    font-family: "HelveticaNeueCyr-Thin";
+    padding-top: 25px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.section_3 {
+    padding-top: 36px;
+    padding-bottom: 70px;
+}
+
+.section_3_first h3 {
+    padding-top: 30px;
+    font-size: 28px;
+}
+
+.section_3_first p {
+    font-family: "HelveticaNeueCyr-Thin";
+    padding-top: 15px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.section_3_second {
+    font-size: 28px;
+}
+
+.section_3 .section_3_second ul li {
+    font-family: "HelveticaNeueCyr-Thin";
+    padding-top: 22px;
+    font-size: 18px;
+}
+
+.section_3 .section_3_second ul li span {
+    background: url(../img/li.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "HelveticaNeueCyr-Bold";
+    color: #fff;
+    padding: 8px 8px 6px 8px;
+    font-size: 13px;
+    display: inline-block;
+        margin-right: 7px;
+}
+
+.section_4 {
+    padding-top: 55px;
+    padding-bottom: 90px;
+}
+
+.section_4 .block_header .h2 {
+    padding-bottom: 12px;
+}
+
+.section_4 .block_header h3 {
+    font-size: 27px;
+}
+
+.section_4 .block_header p {
+    font-family: "HelveticaNeueCyr-Thin";
+    padding-top: 15px;
+    line-height: 21px;
+    font-size: 18px;
+}
+
+.section_4 .h3 {
+    font-family: "HelveticaNeueCyr-Medium";
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.section_4 table {
+    width: 100%;
+    margin-top: 38px;
+}
+
+.section_4 .main_table {
+    background: #25aae1;
+    border-radius: 23px;
+    height: 46px;
+
+}
+
+.section_4 .main_table td {
+     font-family: "HelveticaNeueCyr-Medium";
+    color:#fff;   
+}
+
+.section_4 table tr td  {
+    vertical-align: middle;
+    font-family: "HelveticaNeueCyr-Thin";
+    color:#7e7e7e;
+}
+
+.section_4 table tr td:nth-child(1), .section_4 table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.section_4 table tr td:nth-child(1) {
+      font-family: "HelveticaNeueCyr-Medium";  
+}
+
+.section_4 table tr {
+    height: 53px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section_4 table tr td:nth-child(1) {
+        width: 10%;
+    padding-right: 59px;
+}
+
+.section_5 {
+    padding-top: 55px;
+    margin-bottom: -4px;
+}
+
+.section_5_text {
+    padding-top: 13px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.section_5_img {
+    margin-top: -28px;
+    margin-left: -52px;
+}
+
+.section_6 {
+    padding-top: 56px;
+    padding-bottom: 22px;
+}
+
+.section_6 .h2 {
+    padding-bottom: 56px;
+}
+
+.section_6 .content-left {
+    float: left;
+    padding-right: 62px; 
+}
+
+.section_6  h3 {
+    font-size: 27px;
+}
+
+.section_6 p {
+    padding-top: 22px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.section_6_block {
+    padding-bottom: 57px;
+}
+
+.section_7 {
+    padding-top: 46px;
+    padding-bottom: 146px;
+}
+
+.review_img {
+    float: left;
+    padding-right: 23px;
+}
+
+.review_content h3 {
+    font-size: 25px;
+}
+
+.review_content p {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: "HelveticaNeueCyr-Thin";
+    line-height: 23px;
+}
+
+.section_7 .social {
+    text-align: right;
+    position: relative;
+    top: 21px;
+    left: -9px;
+}
+
+.maps_block {
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 123px;
+    padding: 20px;
+    margin-top: 68px;
+    padding-top: 47px;
+}
+
+.section_8 {
+    position: relative;
+}
+
+.map_content_rels {
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.map_content_rels img {
+    float: left;
+}
+
+.maps_block h3 {
+    text-align: center;
+    color: #25aae1;
+    font-size: 32px;
+}
+
+.maps_block p {
+    padding-left: 30px;
+    line-height: 31px;
+}
+
+footer {
+    background: #25aae1;
+        padding-top: 30px;
+    padding-bottom: 17px;
+    color:#fff;
+}
+
+footer .social {
+    text-align: right;
+}
+
+.callback input {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.callback .submit {
+    background: #25aae1;
+    padding: 16px;
+    color: #fff;
+}
+
+#callback_form h2 {
+    text-align: center;
+    color: #25aae1;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+.nav .active {
+    color: #25aae1 !important;
+}
